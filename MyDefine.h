@@ -27,7 +27,13 @@ extern void _nop_ (void);
 #define FOSC 22118400UL
 
 
-//为了AutoDown而进行的定义
+//为了AutoDown而进行的定义 在不同的芯片里面地址不一样
 #define STC89C52
+//为了在传统的芯片里面使用自定义的定时器
+#define T12
+
+//
+#define SetPinIn(x, y) (x) |= 1 << (y)
+#define SetPortIn(x) x = 0xFF
 #endif  
 
